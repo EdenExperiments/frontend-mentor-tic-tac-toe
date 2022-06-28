@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  
+  <title>Frontend Mentor | Tic Tac Toe</title>
+</head>
+<body>
+
+  <!-- New game menu start -->
+  <main>
+
+    <div id="new-game-container">
+      <div id="new-game-header">
+          <img src="./assets/icon-x.svg" alt="x icon" id="ng-header-x" />
+          <img src="./assets/icon-o.svg" alt="o icon" id="ng-header-o" />
+      </div>
+      <div id="pick-player">
+        <h5>PICK PLAYER 1'S MARK</h5>
+        <div id="x-or-y">
+          <button class="select-x">
+            <img src="./assets/icon-x.svg" alt="x icon" id="ng-select-x" />
+          </button>
+          <button class="active select-o">
+            <img src="./assets/icon-o-hollow.svg" alt="o icon" id="ng-select-o"/>
+          </button>
+        </div>
+        <p>REMEMBER : X GOES FIRST</p>
+      </div>
+      <div id="ng-vs-cpu">
+        <button class="ng-button-text vsCPuBtn">New Game (vs CPU)</button>
+      </div>
+      <div id="ng-vs-player">
+        <button class="ng-button-text  vsPlayerBtn">New Game (vs player)</button>
+      </div> 
+    </div>
+
+
+    <div id="game-container">
+      <div id="game-header">
+        <div id="xy-header">
+          <img src="./assets/icon-x.svg" alt="x icon" id="ng-header-x" />
+          <img src="./assets/icon-o.svg" alt="o icon" id="ng-header-o" />
+        </div>
+        <div id="turn-indicator">
+          <img src="assets/icon-x.svg" />
+          <p> Turn</p>
+        </div>
+        <div id="reset-container">
+          <button id="resetBtn">Quit</button>
+        </div>
+      </div>
+
+      <div id="game-boxes">
+        <button class="box" id="0"><div></div></button>
+        <button class="box" id="1"><div></div></button>
+        <button class="box" id="2"><div></div></button>
+        <button class="box" id="3"><div></div></button>
+        <button class="box" id="4"><div></div></button>
+        <button class="box" id="5"><div></div></button>
+        <button class="box" id="6"><div></div></button>
+        <button class="box" id="7"><div></div></button>
+        <button class="box" id="8"><div></div></button>
+      </div>
+      <div id="scores">
+        <div id="x-score-container"><p>X</p><p class="score">0</p></div>
+        <div id="number-of-ties-container"><p>Ties</p><p class="score">0</p></div>
+        <div id="o-score-container"><p>O</p><p class="score">0</p></div>
+      </div>
+    </div>
+  </main>
+
+  <aside id="gameEndContainer">
+    <div class="textContainer">
+      <p id="smallMessage">Message</p>
+      <p id="largeMessage"><span></span>TAKES THE ROUND</p>
+      <button id="quitButton">Quit</button>
+      <button id="nextRoundButton">Next Round</button>
+    </div>
+  </aside>
+
+  <div id="endGameOverlay"></div>
+</body>
+<script src="./typescript/index.js"></script>
+</html>

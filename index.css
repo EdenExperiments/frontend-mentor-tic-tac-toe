@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
+html {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    background-color: #1A2A33;
+    max-height: 100vh;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body margin 0 for main menu */
+
+/* Typography */
+
+body * {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    kerning: 2.5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    kerning: 1.5px;
+}
+
+h4 {
+    font-weight: 700;
+    font-size: 1.25rempx;
+    kerning: 1.25px;
+}
+
+h5, .ng-button-text {
+    font-size: 1rem;
+    font-weight: 700;
+    kerning: 1px;
+}
+
+/* Styling */ 
+
+main {
+    align-self: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#new-game-container {
+    margin-top: 50px;
+    text-align: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: 50px 230px 60px 60px;
+    max-height: 90vh;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#new-game-container ~ * {
+    width: 100%;
+}
+
+img, svg image {
+    height: 32px;
+    width: 32px;
+}
+
+#pick-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #1F3641;
+    box-shadow: inset 0px -8px 0px #10212A;
+    border-radius: 15px;
+}
+
+#pick-player p, #pick-player h5 {
+    color: #A8BFC9;
+}
+
+#pick-player p {
+    margin-bottom: 25px;
+}
+
+#x-or-y {
+    align-self: center;
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    width: 85%;
+    background-color: #10212A;
+    border-radius: 10px;
+}
+
+#x-or-y > button {
+    height: 85%;
+    width: 45%;
+    align-self: center;
+    border-radius: 10px;
+    border: none;
+    background-color: #10212A;
+}
+
+#x-or-y > button.active {
+    background-color: #A8BFC9;
+}
+
+#pick-player p {
+    opacity: 0.5;
+}
+
+#ng-vs-cpu > button {
+    border: none;   
+    height: 50px;
+    width: 100%; 
+    background: #F2B137;
+    padding-bottom: 8px;
+    box-shadow: inset 0px -8px 0px #CC8B13;
+    border-radius: 15px;
+}
+
+#ng-vs-player > button {
+    border: none;
+    height: 50px;
+    width: 100%;     
+    padding-bottom: 8px;
+    background: #31C3BD;
+    box-shadow: inset 0px -8px 0px #118C87;
+    border-radius: 15px;
+}
+
+#ng-vs-cpu > button:active, #ng-vs-player > button:active, #game-boxes > .box:active {
+    box-shadow: inset 0px 8px 0px #1A2A33
+}
+
+#game-container {
+    margin-top: 20px;
+    display: none;
+    grid-template-rows: 50px repeat(3, auto) 50px;
+    grid-gap: 20px;
+    height: 500px;
+    max-height: 90vh;
+    max-width: 475px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#game-header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+#xy-header img {
+    transform: scale(0.75)
+}
+
+#turn-indicator {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    text-align: center;
+    width: 100%;
+    background: #1F3641;
+    box-shadow: inset 0px -4px 0px #10212A;
+    border-radius: 5px;
+}
+
+#turn-indicator img {
+    display: inline;
+    height: 16px;
+    width: 16px;
+    align-self: center;
+}
+
+#turn-indicator p {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+    display: inline;
+    margin-left: 5px;
+}
+
+#reset-container {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-start;
+}
+
+#resetBtn {
+    height: 50px;
+    width: 50px;
+    background: #A8BFC9;
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 5px;
+    border: none;
+}
+
+#game-boxes {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.box {
+    aspect-ratio: 1;
+    background-color: #1F3641;
+    box-shadow: inset 0px -8px 0px #10212A;
+    border-radius: 15px;
+    border: none;
+    padding: 25px;
+}
+
+#scores {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    min-height: 60px;
+}
+
+#x-score-container {
+    background: #31C3BD;
+    border-radius: 10px;
+}
+
+#number-of-ties-container {
+    background: #A8BFC9;
+    border-radius: 10px;
+}
+
+#o-score-container {
+    background: #F2B137;
+    border-radius: 10px;
+}
+
+aside {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    height: 260px;
+    background-color: #1F3641;
+    text-align: center;
+    z-index: 2;
+}
+
+aside #smallMessage {
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #A8BFC9;
+}
+
+aside #largeMessage {
+    margin: 0 0 20px;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 50px;
+    letter-spacing: 2.5px;
+    color: #F2B137;
+}
+
+aside #largeMessage span {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("./assets/icon-o.svg");
+    background-size: cover;
+    min-height: 32px;
+    min-width: 32px;
+    margin-right: 10px;
+}
+
+aside #quitButton {
+    border: none;
+    width: 76px;
+    height: 52px;
+    background: #A8BFC9;
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+aside #nextRoundButton {
+    border: none;
+    width: 146px;
+    height: 52px;
+    background: #F2B137;
+    box-shadow: inset 0px -4px 0px #CC8B13;
+    border-radius: 10px;  
+}
+
+#endGameOverlay {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1A2A33;
+    opacity: 0.7;
+    z-index: 1;
+
+}
+
+button div {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#game-container.x-go #game-boxes button:enabled:hover div, button:enabled:focus div {
+    background-image: url(./assets/icon-x-outline.svg) !important;
+}
+
+#game-container.o-go #game-boxes button:enabled:hover div, button:enabled:focus div {
+    background-image: url(./assets/icon-o-outline.svg) !important;
+}
+
+#ng-vs-cpu button:active, #ng-vs-player button:active {
+    box-shadow: inset 0px 8px 0px #1A2A33;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:disabled:hover {
+    cursor: default;
+}
+
+#game-boxes > .box:disabled {
+    box-shadow: inset 0px 8px 0px #1A2A33;
+}
+
