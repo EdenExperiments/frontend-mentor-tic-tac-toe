@@ -55,7 +55,7 @@ h5, .ng-button-text {
 main {
     align-self: center;
     max-width: 90%;
-    width: fit-content;
+    width: 90%;
     height: auto;
     margin: 0 auto;
 }
